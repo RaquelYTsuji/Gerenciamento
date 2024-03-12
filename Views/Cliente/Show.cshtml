@@ -1,0 +1,27 @@
+@model Aula29MVCDB.Models.Cliente
+
+@{
+    //interpolação de string (colocar uma prop dentro de uma string - não precisa concatenar)
+    ViewData["Title"] = $"Cliente {Model.ClienteId}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p><b>ClienteId:</b> @Model.ClienteId</p>
+<p><b>Endereço:</b> @Model.Endereco</p>
+<p><b>Cidade:</b> @Model.Cidade</p>
+<p><b>Região:</b> @Model.Regiao</p>
+<p><b>Código Postal:</b> @Model.CodigoPostal</p>
+<p><b>País:</b> @Model.Pais</p>
+<p><b>Telefone:</b> @Model.Telefone</p>
+
+ <a href="/Cliente/Show?ClienteId=@Model.ClienteId">
+    <button type="button">Detalhes</button>
+</a>
+
+<a href="/Cliente/Delete?ClienteId=@Model.ClienteId">
+    <button type="button">Deletar</button>
+</a>
+
+<a href="/Cliente/Update?ClienteId=@Model.ClienteId">
+    <button type="button">Atualizar</button>
+</a>

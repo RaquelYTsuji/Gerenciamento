@@ -1,0 +1,43 @@
+@model IEnumerable<Aula29MVCDB.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Pedido";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Count() == 0)
+{
+    <p>Nenhum pedido cadastrado.</p>    
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>PedidoId</th>
+                <th>EmpregadoId</th>
+                <th>DataPedido</th>
+                <th>Peso</th>
+                <th>CodTransportadora</th>
+                <th>PedidoClienteId</th>
+                <th></th>
+            </tr>
+            <tbody>
+                @foreach(var pedido in Model)
+                {
+                    <tr>
+                        <td>@pedido.PedidoId</td>
+                        <td>@pedido.EmpregadoId</td>
+                        <td>@pedido.DataPedido</td>
+                        <td>@pedido.Peso</td>
+                        <td>@pedido.CodTransportadora</td>
+                        <td>@pedido.PedidoClienteId</td>
+                        <td>
+                            <a href="/Pedido/Show?PedidoId=@pedido.PedidoId">Ver</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </thead>
+    </table>
+}

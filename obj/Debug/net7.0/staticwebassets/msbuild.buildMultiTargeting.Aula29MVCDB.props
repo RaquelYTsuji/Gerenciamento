@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Aula29MVCDB.props" />
+</Project>

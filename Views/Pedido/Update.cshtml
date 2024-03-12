@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Atualizar um pedido";
+}
+
+<div class="text">
+    <h1>Atualizar as informações de um pedido:</h1>
+    <hr>
+</div>
+
+
+<form action="/Pedido/UpdateResult" method="post">
+    <table>
+        <tr>
+            <td>Digite o PedidoId:</td>
+            <td><input type="text" name="pedidoId" id="pedidoId" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>EmpregadoId:</td>
+            <td><input type="text" name="empregadoId" id="empregadoId" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Data Pedido:</td>
+            <td><input type="text" name="dataPedido" id="dataPedido" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Peso:</td>
+            <td><input type="text" name="peso" id="peso" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Código Transportadora:</td>
+            <td><input type="text" name="codTransportadora" id="codTransportadora" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>PedidoClienteId:</td>
+            <td><input type="text" name="pedidoClienteId" id="pedidoClienteId" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td> <button type="submit" class="btn btn-primary">Enviar</button></td>
+        </tr>
+
+    </table>
+</form>

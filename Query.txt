@@ -1,0 +1,18 @@
+CREATE TABLE Clientes (
+    ClienteId int, 
+    Endereco varchar(80), 
+    Cidade varchar(30),
+    Regiao varchar(10),
+    CodigoPostal varchar(10),
+    Pais varchar(30),
+    Telefone varchar(15)
+);
+
+CREATE TABLE Pedidos (
+    PedidoId int, 
+    EmpregadoId int, 
+    DataPedido varchar(10),
+    Peso varchar(10),
+    CodTransportadora int,
+    PedidoClienteId int
+);

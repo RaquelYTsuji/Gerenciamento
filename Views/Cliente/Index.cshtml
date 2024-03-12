@@ -1,0 +1,45 @@
+@model IEnumerable<Aula29MVCDB.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Cliente";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Count() == 0)
+{
+    <p>Nenhum cliente cadastrado.</p>    
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ClienteId</th>
+                <th>Endereco</th>
+                <th>Cidade</th>
+                <th>Regiao</th>
+                <th>CodigoPostal</th>
+                <th>Pais</th>
+                <th>Telefone</th>
+                <th></th>
+            </tr>
+            <tbody>
+                @foreach(var cliente in Model)
+                {
+                    <tr>
+                        <td>@cliente.ClienteId</td>
+                        <td>@cliente.Endereco</td>
+                        <td>@cliente.Cidade</td>
+                        <td>@cliente.Regiao</td>
+                        <td>@cliente.CodigoPostal</td>
+                        <td>@cliente.Pais</td>
+                        <td>@cliente.Telefone</td>
+                        <td>
+                            <a href="/Cliente/Show?ClienteId=@cliente.ClienteId">Ver</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </thead>
+    </table>
+}
